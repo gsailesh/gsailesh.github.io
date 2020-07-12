@@ -26,5 +26,4 @@ These are learnt separately, or jointly alongside the task at hand (be it classi
 
 Word2Vec is a approach where CBOW / Skip-gram models are used to predict the word and its context. A Continuous Bag of Words (CBOW) model uses the surrounding words (or the context) to predict the current word. While the Skip-gram uses the current word to predict it's context.
 
-***Word2Vec*** learns about the word using the local context. 
-***GloVe***, on the other hand marries local context information with the global corpus statistics (using approaches like LSA) to obtain better word embeddings.
+***Word2Vec*** learns about the word using the local context. ***GloVe***, on the other hand marries local context information with the global corpus statistics (using approaches like LSA) to obtain better word embeddings.
