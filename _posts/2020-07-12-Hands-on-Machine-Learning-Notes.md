@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Notes from Hands on ML with Scikit Learn and Tensorflow (2nd Ed)"
+title: "Notes from Hands on ML with Scikit Learn and Tensorflow (2nd Ed) Book"
 date: 2020-07-12 11:40:00 +0530
 categories: Notes Deep-learning
 ---
