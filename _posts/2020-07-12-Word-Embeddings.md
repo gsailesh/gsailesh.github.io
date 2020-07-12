@@ -1,7 +1,9 @@
-# Word Embeddings - An intuition
-
-Created: Jun 9, 2020 9:51 PM
-Tags: Concepts, Data science, NLP
+---
+layout: page
+title: "Word Embeddings - An Intuition"
+date: 2020-07-12 11:40:00 +0530
+categories: Notes NLP
+---
 
 These jottings are largely from Jason Brownlee's life-saver [blog](https://machinelearningmastery.com/what-are-word-embeddings/) !
 
