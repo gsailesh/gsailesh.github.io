@@ -24,12 +24,8 @@ These are learnt separately, or jointly alongside the task at hand (be it classi
 
 2. Using **Word2Vec / GloVe**
 
-Word2Vec is a approach where CBOW / Skip-gram models are used to predict the word and its context. A Continuous Bag of Words (CBOW) model uses the surrounding words (or the context) to predict the current word. While the Skip-gram uses the current word to predict it's context. Visualized below:
-
-![Word%20Embeddings%20An%20intuition%20f408808339e54877b35c7bb485b758a7/Untitled.png](Word%20Embeddings%20An%20intuition%20f408808339e54877b35c7bb485b758a7/Untitled.png)
-
-**Source**: Word2Vec Training Models (Taken from “Efficient Estimation of Word Representations in Vector Space”, 2013)
+Word2Vec is a approach where CBOW / Skip-gram models are used to predict the word and its context. A Continuous Bag of Words (CBOW) model uses the surrounding words (or the context) to predict the current word. While the Skip-gram uses the current word to predict it's context.
 
 ***Word2Vec*** learns about the word using the local context. 
 
-***GloVe***, ******on the other hand marries local context information with the global corpus statistics (using approaches like LSA) to obtain better word embeddings.
+***GloVe***, on the other hand marries local context information with the global corpus statistics (using approaches like LSA) to obtain better word embeddings.
