@@ -58,6 +58,59 @@ The causal aspect involves modifying the attention mechanism to prevent the mode
 
 The multi-head component involves splitting the attention mechanism into multiple “heads.” Each head learns different aspects of the data, allowing the model to simultaneously attend to information from different representation subspaces at different positions. This improves the model’s performance in complex tasks.
 
-## Additional Figures
+An illustration of masked attention (causal attention) is given below:
 
 ![image.png](Chapter%203%20Coding%20Attention%20Mechanisms%2018d345517e4b804eb3becf79ab3171f0/image%209.png)
+
+The normalized attention weights are masked by multiplying them with a *lower* triangular matrix of **1**s (to obtain masked scores) and then re-normalized (to masked weights).
+
+```python
+mask_simple = torch.tril(torch.ones(context_length, context_length))
+masked_simple = attn_weights*mask_simple
+
+row_sums = masked_simple.sum(dim=-1, keepdim=True)
+masked_simple_norm = masked_simple / row_sums
+```
+
+However, there’s a hint of information leakage here since the attention weights are normalized prior to the application of masks. This is however untrue as there’s no evidence of masked weights affecting the softmax output. Intuitively, this is because the masking step prohibits these attention weights to be available to softmax. Since they’re are essentially masked, they are not available for the softmax, i.e., the softmax is applied only on the unmasked subset.
+
+However, there’s another efficient method to implement causal attention. This is by simply setting the masked elements to $-\infty$.
+
+```python
+mask = torch.triu(torch.ones(context_length, context_length), diagonal=1)
+masked = attn_scores.masked_fill(mask.bool(), -torch.inf) # Apply to attention scores.
+
+attn_weights = torch.softmax(masked / keys.shape[-1]**0.5, dim=1)
+```
+
+Additionally, *dropout* techniques may be introduced to the GPT (or transformer module) to help them learn different aspects of the data. The dropout may be applied in two ways:
+
+1. To the masked attention weights (common)
+2. After applying masked attention weights to the values matrix
+
+An illustration of dropout technique is given:
+
+![image.png](Chapter%203%20Coding%20Attention%20Mechanisms%2018d345517e4b804eb3becf79ab3171f0/image%2010.png)
+
+## Multi-head Attention
+
+An illustration is MHA is provided:
+
+![image.png](Chapter%203%20Coding%20Attention%20Mechanisms%2018d345517e4b804eb3becf79ab3171f0/image%2011.png)
+
+Another illustration:
+
+![image.png](Chapter%203%20Coding%20Attention%20Mechanisms%2018d345517e4b804eb3becf79ab3171f0/image%2012.png)
+
+## Summary
+
+- Attention mechanisms transform input elements into enhanced context vector representations that incorporate information about all inputs.
+- A self-attention mechanism computes the context vector representation as a weighted sum over the inputs.
+- Scaled dot product attention is used to softmax from saturating and gradients from becoming zero during training.
+- A causal attention mask can prevent the LLM from accessing future tokens. A dropout mask to reduce overfitting in LLMs.
+- The attention modules in transformer-based LLMs involve multiple instances of causal attention, which is called multi-head attention.
+- A multi-head attention can be created by stacking multiple instances of causal attention modules, or more efficiently using batched matrix multiplications.
+
+## Additional Figures
+
+![image.png](Chapter%203%20Coding%20Attention%20Mechanisms%2018d345517e4b804eb3becf79ab3171f0/image%2013.png)
