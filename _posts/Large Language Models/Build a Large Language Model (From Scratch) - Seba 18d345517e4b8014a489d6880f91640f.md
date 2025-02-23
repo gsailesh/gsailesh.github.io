@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Build a Large Language Model (From Scratch) Book"
+date: 2025-02-23 05:40:00 +0530
+categories: Notes Deep-learning
+---
+
 # Build a Large Language Model (From Scratch) -  Sebastian Raschka
 
 **Source**: [https://learning.oreilly.com/library/view/build-a-large/9781633437166/](https://learning.oreilly.com/library/view/build-a-large/9781633437166/)

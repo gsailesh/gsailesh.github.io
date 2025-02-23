@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Notes from Appendix A."
+date: 2025-02-22 11:40:00 +0530
+categories: Notes Deep-learning
+---
 # Notes from Appendix A
 
 ## Basics
