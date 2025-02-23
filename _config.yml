@@ -1,9 +1,9 @@
 title: In pursuit of Flow.
 author:
-  name: Sailesh
-#   email: your-email@domain.com
+  name: Sailesh Ganeshan
+  email: tallmanofkaramana@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  In pursuit of Flow - the Zen of deeper learning.
+  In pursuit of Flow - This is a learning blog. You'll find my notes on various topics here.
 show_excerpts: false # set to true to show excerpts on the homepage
 
 # Minima date format
@@ -46,8 +46,8 @@ minima:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-#header_pages:
-# - about.md
+header_pages:
+- about.md
 
 # Build settings
 theme: minima
