@@ -13,7 +13,7 @@ Code: https://github.com/gsailesh/self-learn/blob/llm-book/Build-LLMs-from-scrat
 
 An illustration of a simple self attention (sans weights):
 
-![image.png](gsailesh.github.io/_posts/2025-02-24-Chapter 3 Coding Attention Mechanisms/image.png)
+![image.png](gsailesh.github.io/_posts/2025-02-24-Chapter%203%20Coding%20Attention%20Mechanisms/image.png)
 
 - The input sequence $X_{1}$ is *Your journey starts…*
 - Each token in this sequence may be represented as $x^{(1)}$ = Your **and $x^{(2)}$ = journey and so on
