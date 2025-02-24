@@ -5,7 +5,7 @@ date: 2025-02-23 20:40:00 +0530
 categories: Notes Deep-learning
 ---
 
-# Chapter 3: Coding Attention Mechanisms
+
 
 Code: https://github.com/gsailesh/self-learn/blob/llm-book/Build-LLMs-from-scratch/03a.coding_attention.ipynb
 
