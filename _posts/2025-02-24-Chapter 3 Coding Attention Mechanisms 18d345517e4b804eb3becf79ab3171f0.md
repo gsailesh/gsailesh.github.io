@@ -13,10 +13,10 @@ Code: https://github.com/gsailesh/self-learn/blob/llm-book/Build-LLMs-from-scrat
 
 An illustration of a simple self attention (sans weights):
 
-![image.png](Chapter%203%20Coding%20Attention%20Mechanisms%2018d345517e4b804eb3becf79ab3171f0/image.png)
+![image.png](Chapter%203%20Coding%20Attention%20Mechanisms%2018d345517e4b804eb3becf79ab3171f0/image 1.png)
 
 - The input sequence $X_{1}$ is *Your journey starts…*
-- Each token in this sequence may be represented as $x^{(1)}$ = Your **and $x^{(2)}$ = journey and so on
+- Each token in this sequence may be represented as $x^{(1)}$ = Your and $x^{(2)}$ = journey and so on
 - The illustration depicts the context vector element $z^{(2)}$ that is computed from all of the input tokens weighted by specific attention weights - one for each token
 - Finally a context vector $Z_{1}$ is made up of the elements $z^{(1)}, z^{(2)},$ etc.
 - The purpose of a context vector is to create enriched representations of each element in an input sequence by incorporating information from all other elements in the sequence. This is essential in LLMs.
