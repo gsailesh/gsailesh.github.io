@@ -7,7 +7,7 @@ categories: Notes Deep-learning
 
 
 
-Code: https://github.com/gsailesh/self-learn/blob/llm-book/Build-LLMs-from-scratch/03a.coding_attention.ipynb
+Code: [03a.coding_attention.ipynb](https://github.com/gsailesh/self-learn/blob/llm-book/Build-LLMs-from-scratch/03a.coding_attention.ipynb)
 
 ### Illustration: Self Attention without trainable weights
 
